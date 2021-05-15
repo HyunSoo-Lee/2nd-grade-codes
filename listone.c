@@ -49,7 +49,7 @@ void insert(int pos, Namecard item) {
 		length++;
 	}
 	else
-		printf("Æ÷È­»óÅÂ ¿À·ù ¶Ç´Â »ðÀÔ À§Ä¡ ¿À·ù\n");
+		printf("í¬í™”ìƒíƒœ ì˜¤ë¥˜ ë˜ëŠ” ì‚½ìž… ìœ„ì¹˜ ì˜¤ë¥˜\n");
 }
 
 void delete(int pos) {
@@ -60,21 +60,21 @@ void delete(int pos) {
 		length--;
 	}
 	else
-		printf("°ø¹é»óÅÂ ¿À·ù ¶Ç´Â »èÁ¦ À§Ä¡ ¿À·ù\n");
+		printf("ê³µë°±ìƒíƒœ ì˜¤ë¥˜ ë˜ëŠ” ì‚­ì œ ìœ„ì¹˜ ì˜¤ë¥˜\n");
 }
 
 void replace(int pos, Namecard item) {
 	if (pos >= 0 && pos < length)
 		iot_list[pos] = item;
 	else
-		printf("±³Ã¼ À§Ä¡ ¿À·ù\n");
+		printf("êµì²´ ìœ„ì¹˜ ì˜¤ë¥˜\n");
 }
 
 Namecard get_entry(int pos) {
 	if (pos >= 0 && pos < length)
 		return iot_list[pos];
 	else
-		printf("¹ÝÈ¯ À§Ä¡ ¿À·ù\n");
+		printf("ë°˜í™˜ ìœ„ì¹˜ ì˜¤ë¥˜\n");
 }
 
 int find(Namecard item) {
@@ -119,18 +119,18 @@ int main() {
 	init();
 	print_list("Init");
 
-	insert(0, make_Namecard("ÀÌÇö¼ö", 20201514));
-	insert(0, make_Namecard("ÀÌÁ¤ºó", 20201503));
-	insert(1, make_Namecard("ÇÑ¹®¼·", 20201504));
-	insert(size(), make_Namecard("±è¹Î¼º", 20201496));
-	insert(3, make_Namecard("±è¼º¿õ", 20201506));
-	insert(size(), make_Namecard("±è±æÈ£", 20201494));
-	insert(10, make_Namecard("¾ç±â¼®", 20201508));
+	insert(0, make_Namecard("ì´í˜„ìˆ˜", 20201514));
+	insert(0, make_Namecard("ì´ì •ë¹ˆ", 20201503));
+	insert(1, make_Namecard("í•œë¬¸ì„­", 20201504));
+	insert(size(), make_Namecard("ê¹€ë¯¼ì„±", 20201496));
+	insert(3, make_Namecard("ê¹€ì„±ì›…", 20201506));
+	insert(size(), make_Namecard("ê¹€ê¸¸í˜¸", 20201494));
+	insert(10, make_Namecard("ì–‘ê¸°ì„", 20201508));
 	print_list("Insert");
 
-	replace(size() - 1, make_Namecard("¿°ÁØ¼±", 20201493));
-	replace(4, make_Namecard("ÇÑ½Â¿ì", 20201511));
-	replace(20, make_Namecard("±ÇÈ£À±", 20201512));
+	replace(size() - 1, make_Namecard("ì—¼ì¤€ì„ ", 20201493));
+	replace(4, make_Namecard("í•œìŠ¹ìš°", 20201511));
+	replace(20, make_Namecard("ê¶Œí˜¸ìœ¤", 20201512));
 	print_list("Replace");
 
 	delete(3);
@@ -141,7 +141,7 @@ int main() {
 
 	sort_list();
 	print_list("Sort");
-	printf("%s is found at %d\n", "ÇÑ½Â¿ì", find(make_Namecard("ÇÑ½Â¿ì", 20201511)));
-	printf("%s is found at %d\n", "¼®ÁØÇö", find(make_Namecard("¼®ÁØÇö", 20201515)));
-	printf("%s is found at %d\n", "ÇÑ¹®¼·", find(make_Namecard("ÇÑ¹®¼·", 20201234)));
+	printf("%s is found at %d\n", "í•œìŠ¹ìš°", find(make_Namecard("í•œìŠ¹ìš°", 20201511)));
+	printf("%s is found at %d\n", "ì„ì¤€í˜„", find(make_Namecard("ì„ì¤€í˜„", 20201515)));
+	printf("%s is found at %d\n", "í•œë¬¸ì„­", find(make_Namecard("í•œë¬¸ì„­", 20201234)));
 }
